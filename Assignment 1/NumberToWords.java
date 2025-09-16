@@ -1,3 +1,6 @@
+//This program is used to convert the integer input into equivalent words
+//Owner: Ayush Joshi
+
 import java.util.Scanner;
 
 public class NumberToWords {

@@ -1,3 +1,6 @@
+//This program expands the characters in String according to the frequency written infront of the single character
+//Owner: Ayush Joshi
+
 import java.util.Scanner;
 
 public class ExpandCharacters {
@@ -12,7 +15,7 @@ public class ExpandCharacters {
                 if (isValidInput(s)) {
                     break; // exit loop if input is valid
                 } else {
-                    System.out.println("❌ Invalid input! Use only lowercase letters followed by digits, e.g., a1b4c3.");
+                    System.out.println("Invalid input! Use only lowercase letters followed by digits, e.g., a1b4c3.");
                 }
             }
 
@@ -25,7 +28,7 @@ public class ExpandCharacters {
                 // read the number following the character
                 int j = i + 1;
                 if (j >= s.length() || !Character.isDigit(s.charAt(j))) {
-                    System.out.println("❌ Missing digit after '" + ch + "'.");
+                    System.out.println("Missing digit after '" + ch + "'.");
                     return;
                 }
 
@@ -43,7 +46,7 @@ public class ExpandCharacters {
 
                 i = j;
             }
-            System.out.println("✅ Expanded string: " + result);
+            System.out.println("Expanded string: " + result);
         }
     }
 

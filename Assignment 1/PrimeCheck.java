@@ -1,3 +1,6 @@
+//This program detects a prime number
+//Owner: Ayush Joshi
+
 import java.util.*;
 public class PrimeCheck {
     public static void main(String[] args) {
@@ -5,10 +8,10 @@ public class PrimeCheck {
             int n;
             System.out.println("Number: ");
             while(true){
-                if(sc.hasNextInt()){
+                if(sc.hasNextInt()){//sc.hasNextInt checks whether the input taken holds an integer value or not
                     n=sc.nextInt();
                     isprime(n);
-                    break;
+                    break;//To break out of the infinite loop
                 }else{
                     System.out.println("Error!! enter Integer values only: ");
                     sc.next();//To avoid going into infinite loop

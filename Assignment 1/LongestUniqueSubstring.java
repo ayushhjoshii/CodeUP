@@ -1,5 +1,7 @@
-import java.util.HashSet;
-import java.util.Scanner;
+//This program tell the length of the longest substring containing unique characters
+//Owner: Ayush Joshi
+
+import java.util.*;
 
 public class LongestUniqueSubstring {
     public static void main(String[] args) {

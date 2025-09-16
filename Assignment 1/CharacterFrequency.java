@@ -1,5 +1,7 @@
-import java.util.Scanner;
+//This program helps to find the frequency of a character while preserving the order of the string
+//Owner: Ayush Joshi
 
+import java.util.Scanner;
 public class CharacterFrequency {
     public static void main(String[] args) {
         try(Scanner sc = new Scanner(System.in)){
@@ -13,7 +15,7 @@ public class CharacterFrequency {
                 if (input.matches("[a-z]+")) {
                     break; // valid input, exit loop
                 } else {
-                    System.out.println("❌ Invalid input! Only lowercase letters are allowed. Please try again.");
+                    System.out.println("Invalid input! Only lowercase letters are allowed. Please try again.");
                 }
             }
 
@@ -30,7 +32,7 @@ public class CharacterFrequency {
                 }
             }
 
-            System.out.println("✅ Compressed string: " + result);
+            System.out.println("Compressed string: " + result);
         }
     }
 }
