@@ -13,25 +13,36 @@ import java.util.Scanner;
 public class Main {
     public static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.print("Enter the String: ");
-        String input = sc.nextLine().trim();
-
         // This is a boolean Flag used to terminate the program.
 
         boolean keepGoing;
+        MyString myStringObject = new MyString();
+
 
         //Here do-while loop is used to ensure that the program doesn't terminates without the user's will
 
         do{
-            System.out.print("Which operation do you want to perform ?? (append/ replace/ sort/ reverse): ");
-            String operationName = sc.nextLine();
-
-            switch (operationName.toLowerCase()) {
-                case "append"        -> System.out.println(MyString.append(input));
-                case "replace"       -> System.out.println(MyString.replace(input));
-                case "sort"          -> System.out.println(MyString.sort(input));
-                case "reverse"       -> System.out.println(MyString.reverse(input));
-                default              -> System.out.println("Invalid input");
+            System.out.print("Which operation do you want to perform ?? (1. append/ 2. replace/ 3. sort/ 4. reverse): ");
+            int operationNumber = sc.nextInt();
+            sc.nextLine();
+            switch (operationNumber) {
+                case 1       -> {
+                                    System.out.println("Enter already existing String and to be appended strings respectively: ");
+                                    System.out.println(myStringObject.append(sc.nextLine(), sc.nextLine()));
+                                }
+                case 2       -> {
+                                    System.out.println("Enter the input String, OldChar and NewChar respectively: ");
+                                    System.out.println(myStringObject.replace(sc.nextLine(), sc.nextLine(), sc.nextLine()));
+                                }
+                case 3       -> {
+                                    System.out.println("Enter the String: ");
+                                    System.out.println(myStringObject.sort(sc.nextLine()));
+                                }
+                case 4       -> {
+                                    System.out.println("Enter the String: ");
+                                    System.out.println(myStringObject.reverse(sc.nextLine()));
+                                }
+                default      -> System.out.println("Invalid input");
             } 
             
             System.out.println("Do you want to perform operations again ? (y/n): ");

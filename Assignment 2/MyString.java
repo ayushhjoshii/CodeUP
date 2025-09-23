@@ -16,35 +16,32 @@
 public class MyString {
     // 1. Append the input string in a existing string.
 
-    public static String append(String input){
-        String alreadyExisting = "Hello ";
-        System.out.println("Already existing string: " + alreadyExisting);
-        System.out.println("After appending: " + alreadyExisting + input);
-        return "";
+    public String append(String existingString, String input){
+        System.out.println("Already existing string: " + existingString);
+        return "String after appending: " + existingString + input;
     }
 
-    // 2. Replace any portion inside a given string with any user input.
+    // 2. Replace any portion inside a given string with any user inpul
 
-    public static String replace(String input){
-
-        System.out.print("Enter the old character you want to replace: ");
-        String oldChar = Main.sc.nextLine();
-        System.out.println("Enter the new character: ");
-        String newChar = Main.sc.nextLine();
-        String newString = " ";
-        for(int index = 0; index < input.length(); index++){
-            if(input.charAt(index) == oldChar.charAt(0)){
-                newString += newChar.charAt(0);
-            }else{
-                newString += input.charAt(index); 
-            }
+    public String replace(String inputStr, String oldStr, String newStr){
+        if(oldStr == null || oldStr.isBlank()){
+            return "String after Replacement: " + inputStr;
         }
-        return "The new String will be: " + newString;
+        String resultString = "";
+        int currentIndex = 0;
+        int foundIndex;
+        while((foundIndex = inputStr.indexOf(oldStr, currentIndex)) != -1){
+            resultString = resultString + inputStr.substring(currentIndex, foundIndex);
+            resultString = resultString + newStr;
+            currentIndex = foundIndex + oldStr.length();
+        }
+        resultString = resultString + inputStr.substring(currentIndex);
+        return "String after Replacement: " + resultString;
     }
 
     // 3. Sort the given string according to the lexicographical order.
 
-    public static String sort(String input){
+    public String sort(String input){
         char[] charArray = input.toCharArray();
         String output = "";
         for(int index = 0; index < input.length(); index++){
@@ -64,7 +61,7 @@ public class MyString {
 
     // 4. Reverses any input string
 
-    public static String reverse(String input){
+    public String reverse(String input){
         String reversedString = "";
         for(int index = input.length()-1; index >=0; index--){
             reversedString = reversedString + input.charAt(index);
