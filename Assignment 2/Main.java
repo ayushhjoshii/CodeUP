@@ -31,7 +31,7 @@ public class Main {
                                     System.out.println(myStringObject.append(sc.nextLine(), sc.nextLine()));
                                 }
                 case 2       -> {
-                                    System.out.println("Enter the input String, OldChar and NewChar respectively: ");
+                                    System.out.println("Enter the input String, OldSubstring and NewSubstring respectively: ");
                                     System.out.println(myStringObject.replace(sc.nextLine(), sc.nextLine(), sc.nextLine()));
                                 }
                 case 3       -> {
