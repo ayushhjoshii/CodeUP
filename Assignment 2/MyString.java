@@ -21,7 +21,7 @@ public class MyString {
         return "String after appending: " + existingString + input;
     }
 
-    // 2. Replace any portion inside a given string with any user inpul
+    // 2. Replace any portion inside a given string with any user input
 
     public String replace(String inputStr, String oldStr, String newStr){
         if(oldStr == null || oldStr.isBlank()){

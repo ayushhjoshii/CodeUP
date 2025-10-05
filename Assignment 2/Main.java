@@ -24,31 +24,34 @@ public class Main {
         do{
             System.out.print("Which operation do you want to perform ?? (1. append/ 2. replace/ 3. sort/ 4. reverse): ");
             String operationNumber = sc.nextLine();
-            sc.nextLine();
             switch (operationNumber) {
-                case "1"       -> {
-                                    System.out.println("Enter already existing String and to be appended strings respectively: ");
-                                    System.out.println(myStringObject.append(sc.nextLine(), sc.nextLine()));
+                case "1"    -> {
+                                System.out.println("Enter already existing String and to be appended strings respectively: ");
+                                System.out.println(myStringObject.append(sc.nextLine(), sc.nextLine()));
                                 }
-                case "2"       -> {
-                                    System.out.println("Enter the input String, OldSubstring and NewSubstring respectively: ");
-                                    System.out.println(myStringObject.replace(sc.nextLine(), sc.nextLine(), sc.nextLine()));
+
+                case "2"    -> {
+                                System.out.println("Enter the input String, OldSubstring and NewSubstring respectively: ");
+                                System.out.println(myStringObject.replace(sc.nextLine(), sc.nextLine(), sc.nextLine()));
                                 }
-                case "3"       -> {
-                                    System.out.println("Enter the String: ");
-                                    System.out.println(myStringObject.sort(sc.nextLine()));
+
+                case "3"    -> {
+                                System.out.println("Enter the String: ");
+                                System.out.println(myStringObject.sort(sc.nextLine()));
                                 }
-                case "4"       -> {
-                                    System.out.println("Enter the String: ");
-                                    System.out.println(myStringObject.reverse(sc.nextLine()));
+
+                case "4"    -> {
+                                System.out.println("Enter the String: ");
+                                System.out.println(myStringObject.reverse(sc.nextLine()));
                                 }
-                default      -> System.out.println("Invalid input");
+
+                default     ->  System.out.println("Invalid input");
             } 
             
             System.out.println("Do you want to perform operations again ? (y/n): ");
             String userResponse = sc.nextLine();
             keepGoing = userResponse.equalsIgnoreCase("y");
+            
         } while (keepGoing);
     }
 }
-
