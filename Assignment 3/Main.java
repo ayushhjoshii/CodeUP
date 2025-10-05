@@ -1,11 +1,13 @@
 /*
- * This program will be used to call the following four functions from the class called MyOperations :
+ * This program will be used to call the following 4 functions from the class called MyOperations :
  * 
  * 1. Valid Parenthesis Combination
  * 2. Sum of Digits (DigitSum)
  * 3. Consecutive Number Sum
  * 4. Caesar Cipher Encoding
  * 
+ * Owner: Ayush Joshi
+ * Last Updated: 6/10/2025
  */
 import java.util.*;
 public class Main {
